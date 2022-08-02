@@ -1,4 +1,4 @@
-CRUD API
+CRUD API with PSQL
 ## ENGLISH ###
 #Step 1: configure data such as domain name and trusted origins at settings.py
 
