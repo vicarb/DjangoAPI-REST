@@ -27,6 +27,7 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['django']
 
+#CSRF_TRUSTED_ORIGINS = ['http:://mydomain.com']
 
 # Application definition
 
