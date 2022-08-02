@@ -1,35 +1,34 @@
-# django-crud-api
+CRUD API
 ## ENGLISH ###
-#Step 1: Create python virtual environment
+#Step 1: configure data such as domain name and trusted origins at settings.py
 
-python3 -m venv env
-Install requirements.txt
-pip install -r requirements.txt
+#Step 2: Deploy docker compose
 
-#Step 2: Apply migrations
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser
+docker-compose up --build -d
 
-#Step 3: Create categories http://localhost:8000/admin/
+#Step 3: Apply migrations
+docker exec -itpython manage.py makemigrations
+docker exec -it python manage.py migrate --run-syncdb
+docker exec -it python manage.py createsuperuser
 
-#Ready to add data
+#Step 3: Populate api with data at http://domain:8000.com/admin/
+
 
 
 ### SPANISH ###
 #Paso 1: 
-Create python virtual environment
-python3 -m venv env
-Instalar requirements.txt
-pip install -r requirements.txt
+Configurar datos como el dominio en api/settings.py 
 
-#Paso 2:Aplicar migraciones
+#Paso 2: Deploy de red de contenedores a través de docker compose
 
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser
+docker-compose up --build -d
 
-#Paso 3: Crear categoria en http://localhost:8000/admin/
+#Paso 3:Aplicar migraciones
 
-#Listo para añadir datos
+docker exec -itpython manage.py makemigrations
+docker exec -it python manage.py migrate --run-syncdb
+docker exec -it python manage.py createsuperuser
+
+#Paso 3: Añadir data al api en http://domain.com/admin/
+
 
