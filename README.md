@@ -7,11 +7,14 @@ CRUD API
 docker-compose up --build -d
 
 #Step 3: Apply migrations
-docker exec -itpython manage.py makemigrations
-docker exec -it python manage.py migrate --run-syncdb
-docker exec -it python manage.py createsuperuser
 
-#Step 3: Populate api with data at http://domain:8000.com/admin/
+-docker exec -it containerid python manage.py makemigrations 
+
+-docker exec -it containerid python manage.py migrate --run-syncdb 
+
+-docker exec -it containerid python manage.py createsuperuser 
+
+#Step 4: Populate api with data at http://domain:8000.com/admin/
 
 
 
@@ -25,10 +28,12 @@ docker-compose up --build -d
 
 #Paso 3:Aplicar migraciones
 
-docker exec -itpython manage.py makemigrations
-docker exec -it python manage.py migrate --run-syncdb
-docker exec -it python manage.py createsuperuser
+-docker exec -it containerid python manage.py makemigrations 
 
-#Paso 3: Añadir data al api en http://domain.com/admin/
+-docker exec -it containerid python manage.py migrate --run-syncdb 
+
+-docker exec -it containerid python manage.py createsuperuser 
+
+#Paso 4: Añadir data al api en http://domain.com/admin/
 
 
