@@ -14,7 +14,7 @@ docker-compose up --build -d
 
 -docker exec -it containerid python manage.py createsuperuser 
 
-#Step 4: Populate api with data at http://domain:8000.com/admin/
+#Step 4: Populate api with data at http://domain.com/admin/
 
 
 
